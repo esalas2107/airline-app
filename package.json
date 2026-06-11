@@ -1,0 +1,27 @@
+{
+  "name": "airline-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/esalas2107/airline-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/esalas2107/airline-app/issues"
+  },
+  "homepage": "https://github.com/esalas2107/airline-app#readme",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.8.0",
+    "@types/prompt-sync": "^4.2.3"
+  }
+}
