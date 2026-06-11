@@ -1,0 +1,20 @@
+import { Bag } from "./bag";
+
+export class HandLuggage extends Bag {
+    constructor(bagId: number, measures: string = "55 × 40 × 25 cm", weight: number = 10) {
+        super(bagId, measures, weight);
+    }
+
+    toString(): string {
+        return `
+        *** HAND LUGGAGE INFORMATION ***
+        ID: ${this.bagId}
+        MEASURES: ${this.measures}
+        WEIGHT: ${this.weight}
+        `;
+    }
+}
+
+const handLuggage1 = new HandLuggage(1);
+console.log(handLuggage1.toString());
+
