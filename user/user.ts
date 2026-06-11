@@ -1,8 +1,8 @@
-export class User {
-    public _userId: number;
-    public _firstName: string;
-    public _lastName: string;
-    public _birthDate: Date;
+export abstract class User {
+    protected _userId: number;
+    protected _firstName: string;
+    protected _lastName: string;
+    protected _birthDate: Date;
     protected _passportId: string;
 
     constructor(userId: number, firstName: string, lastName: string, birthDate: Date, passportId: string) {
@@ -58,15 +58,6 @@ export class User {
         return userAge;
     }
 
-    toString(): string {
-        return `
-        *** USER INFORMATION ***
-        ID: ${this.userId}
-        NAME: ${this.firstName}
-        LAST NAME: ${this.lastName}
-        BIRTH DATE: ${this.calculateUserAge(this.birthDate)}
-        PASSPORT: ${this.passportId}
-        `
-    }
+    abstract toString(): string;
 
 }

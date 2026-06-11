@@ -1,9 +1,9 @@
 import { User } from "./user";
 
 class Passenger extends User {
-    public _passengerId: number;
-    public _email: string;
-    public _phoneNumber: string;
+    private _passengerId: number;
+    private _email: string;
+    private _phoneNumber: string;
 
     constructor(passengerId: number, email: string, phoneNumber: string, userId: number, firstName: string, lastName: string, birthDate: Date, passportId: string) {
         super(userId, firstName, lastName, birthDate, passportId);
@@ -25,8 +25,15 @@ class Passenger extends User {
     }
 
     toString(): string {
-        return super.toString() + `PASSENGER ID: ${this.passengerId}
-        EMAIL: ${this.email}
-        PHONE NUMBER: ${this.phoneNumber}`;
+        return `
+        *** PASSENGER INFORMATION ***
+        ID: ${this.userId}
+        NAME: ${this.firstName}
+        LAST NAME: ${this.lastName}
+        AGE: ${this.calculateUserAge(this.birthDate)} years old
+        PASSPORT: ${this.passportId} 
+        EMAIL: ${ this.email }
+        PHONE NUMBER: ${ this.phoneNumber }
+        `;
     }
 }
