@@ -7,7 +7,7 @@ export class HandLuggage extends Bag {
 
     toString(): string {
         return `
-        *** Hand Luggage INFORMATION ***
+        *** HAND LUGGAGE INFORMATION ***
         ID: ${this.bagId}
         MEASURES: ${this.measures}
         WEIGHT: ${this.weight}

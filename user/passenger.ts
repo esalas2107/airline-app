@@ -1,6 +1,6 @@
 import { User } from "./user";
 
-class Passenger extends User {
+export class Passenger extends User {
     private _passengerId: number;
     private _email: string;
     private _phoneNumber: string;
