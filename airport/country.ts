@@ -1,4 +1,4 @@
-class Country {
+export class Country {
     private _countryId: number;
     private _countryName: string;
 
@@ -24,7 +24,3 @@ class Country {
     }
 
 }
-
-const country1 = new Country(1, "Senegal");
-
-console.log(country1.toString());
