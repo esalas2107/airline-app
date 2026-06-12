@@ -42,7 +42,7 @@ export class Terminal {
         *** TERMINAL INFORMATION ***
         ID: ${this.terminalId}
         DESCRIPTION: ${this.description}
-        GATES: ${this.gatesInformation(this._gates)}
+        GATES: ${this.gatesInformation(this.gates)}
         `;
     }
 }

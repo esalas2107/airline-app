@@ -14,7 +14,3 @@ export class CheckedBaggage extends Bag {
         `;
     }
 }
-
-const checkedBaggage1 = new CheckedBaggage(1);
-
-console.log(checkedBaggage1.toString());

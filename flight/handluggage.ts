@@ -15,6 +15,3 @@ export class HandLuggage extends Bag {
     }
 }
 
-const handLuggage1 = new HandLuggage(1);
-console.log(handLuggage1.toString());
-

@@ -1,7 +1,6 @@
 import { State } from "./state";
-import { Country } from "./country";
 
-class City {
+export class City {
     private _cityId: number;
     private _cityName: string;
     private _state: State;
@@ -27,8 +26,8 @@ class City {
     toString(): string {
         return `
         *** CITY INFORMATION ***
-        ID: ${this._cityId}
-        NAME: ${this._cityName}
+        ID: ${this.cityId}
+        NAME: ${this.cityName}
         STATE: ${this.state.toString()}
         `;
     }

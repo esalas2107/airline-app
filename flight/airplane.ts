@@ -26,7 +26,7 @@ class Airplane {
         *** AIRPLANE INFORMATION ***
         ID: ${this.airplaneId}
         MODEL: ${this.model}
-        NUMBER OF SEATS: ${this._seatsCapacity}
+        NUMBER OF SEATS: ${this.seatsCapacity}
         `;
     }
 }
