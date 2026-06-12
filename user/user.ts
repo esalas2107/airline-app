@@ -58,6 +58,6 @@ export abstract class User {
         return userAge;
     }
 
-    protected abstract toString(): string;
+    abstract toString(): string;
 
 }

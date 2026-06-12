@@ -1,7 +1,4 @@
 import { Airport } from "../airport/airport";
-import { City } from "../airport/city";
-import { Country } from "../airport/country";
-import { State } from "../airport/state";
 import { Employee } from "../user/employee";
 
 type FlightState = "Scheduled" | "Ground Flight" | "In Route" | "Diverted" | "Diverted" | "Canceled" | "Landed"
@@ -94,34 +91,7 @@ export class Flight {
         ARRIVING DATE: ${this.formatDate(this.arrivingDate)}
         DURATION: ${this.calculateDuration(this.departureDate, this.arrivingDate)}
         FLIGHT CREW: ${this.flightCrewInformation()}
-        STATE: ${this.flightState}
+        FLIGHT STATE: ${this.flightState}
         `;
     }
 }
-
-const country1 = new Country(1, "Costa Rica");
-
-const state1 = new State(1, "Alajuela", country1);
-
-const city1 = new City(1, "Río Segundo", state1);
-
-const airport1 = new Airport(1, "Aeropuerto Internacional Juan Santamaría", city1, [], []);
-
-const country2 = new Country(2, "Panamá");
-
-const state2 = new State(2, "Ciudad de Panamá", country1);
-
-const city2 = new City(2, "Tocumen", state2);
-
-const airport2 = new Airport(2, "Aeropuerto Internacional de Tocumen", city2, [], []);
-
-const employee1 = new Employee(1, "Captain", 1, "Dagoberto", "Jara", new Date(2000, 4, 7), "402470773")
-
-const employee2 = new Employee(2, "Stewardess", 2, "Mari Sol", "Mena", new Date(2002, 8, 14), "118530324");
-
-const flight1 = new Flight(1, airport1, airport2, new Date(2026, 11, 5, 2, 0, 0), new Date(2026, 11, 5, 2, 45, 0), [], "Scheduled");
-
-flight1.addEmployee(employee1);
-flight1.addEmployee(employee2);
-
-console.log(flight1.toString());
