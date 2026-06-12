@@ -15,7 +15,3 @@ export class PersonalItem extends Bag {
         `;
     }
 } 
-
-const personalItem = new PersonalItem(1);
-
-console.log(personalItem.toString());

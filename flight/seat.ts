@@ -1,6 +1,6 @@
 class Seat {
-    public _seatId: number;
-    public _seatCode: string;
+    private _seatId: number;
+    private _seatCode: string;
 
     constructor(seatId: number, seatCode: string) {
         this._seatId = seatId;
