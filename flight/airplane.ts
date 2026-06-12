@@ -1,4 +1,4 @@
-class Airplane {
+export class Airplane {
     private _airplaneId: number;
     private _model: string;
     private _seatsCapacity: number;

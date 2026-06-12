@@ -11,7 +11,7 @@ export class Seat {
         return this._seatId;
     }
 
-    get setCode(): string {
+    get seatCode(): string {
         return this._seatCode;
     }
 
@@ -19,7 +19,7 @@ export class Seat {
         return `
         *** SEAT INFORMATION ***
         ID: ${this.seatId}
-        CODE: ${this.setCode}
+        CODE: ${this.seatCode}
         `
     }
 }

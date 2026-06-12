@@ -1,28 +1,37 @@
 import { Airport } from "../airport/airport";
 import { Employee } from "../user/employee";
+import { Airplane } from "./airplane";
 
-type FlightState = "Scheduled" | "Ground Flight" | "In Route" | "Diverted" | "Diverted" | "Canceled" | "Landed"
+type FlightState = "Scheduled" | "Ground Flight" | "In Route" | "Diverted" | "Canceled" | "Landed"
 export class Flight {
     private _flightId: number;
+    private _flightNumber: string;
     private _origin: Airport;
     private _destination: Airport;
     private _departureDate: Date;
     private _arrivingDate: Date;
     private _flightCrew: Employee[];
     private _flightState: FlightState;
+    private _airplane: Airplane;
 
-    constructor(flightId: number, origin: Airport, destination: Airport, departureDate: Date, arrivingDate: Date, flightCrew: Employee[], flightState: FlightState) {
+    constructor(flightId: number, flightNumber: string, origin: Airport, destination: Airport, departureDate: Date, arrivingDate: Date, flightCrew: Employee[], flightState: FlightState, airplane: Airplane) {
         this._flightId = flightId;
+        this._flightNumber = flightNumber;
         this._origin = origin;
         this._destination = destination;
         this._departureDate = departureDate;
         this._arrivingDate = arrivingDate;
         this._flightCrew = flightCrew;
         this._flightState = flightState;
+        this._airplane = airplane;
     }
 
     get flightId(): number {
         return this._flightId;
+    }
+
+    get flightNumber(): string {
+        return this._flightNumber;
     }
 
     get origin(): Airport {
@@ -47,6 +56,10 @@ export class Flight {
 
     get flightState(): FlightState {
         return this._flightState;
+    }
+
+    get airplane(): Airplane {
+        return this._airplane;
     }
 
     addEmployee(employee: Employee) {
@@ -85,6 +98,7 @@ export class Flight {
         return `
         *** FLIGHT INFORMATION ***
         ID: ${this.flightId}
+        FLIGHT NUMBER: ${this.flightNumber}
         ORIGIN: ${this.origin.specialToString()}
         DESTINATION: ${this.destination.specialToString()}
         DEPARTURE DATE: ${this.formatDate(this.departureDate)}
@@ -92,6 +106,7 @@ export class Flight {
         DURATION: ${this.calculateDuration(this.departureDate, this.arrivingDate)}
         FLIGHT CREW: ${this.flightCrewInformation()}
         FLIGHT STATE: ${this.flightState}
+        AIRPLANE: ${this._airplane.toString()}
         `;
     }
 }

@@ -29,7 +29,7 @@ export class TicketSegment {
         *** TICKET SEGMENT INFORMATION ***
         ID: ${this.ticketSegmentId}
         FLIGHT: ${this.flight.toString()}
-        SEAT: ${this._seat}
+        SEAT: ${this._seat.toString()}
         `
     }
 }

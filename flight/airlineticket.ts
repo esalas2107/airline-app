@@ -3,7 +3,7 @@ import { TicketSegment } from "./ticketsegment";
 
 type AirlineTicketsType = "Economy" | "Premium Economy" | "Business"
 
-class AirlineTicket {
+export class AirlineTicket {
     private _airlineTicketId: number
     private _passenger: Passenger;
     private _ticketsSegments: TicketSegment[];
