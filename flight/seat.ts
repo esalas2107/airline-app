@@ -1,4 +1,4 @@
-class Seat {
+export class Seat {
     private _seatId: number;
     private _seatCode: string;
 

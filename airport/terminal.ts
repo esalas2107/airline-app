@@ -27,10 +27,10 @@ export class Terminal {
         this._gates.push(gate);
     }
 
-    gatesInformation(gates: Gate[]): string {
+    gatesInformation(): string {
         let gatesInformation = "";
 
-        gates.forEach(gate => {
+        this._gates.forEach(gate => {
             gatesInformation += gate.toString()
         });
 
@@ -42,7 +42,7 @@ export class Terminal {
         *** TERMINAL INFORMATION ***
         ID: ${this.terminalId}
         DESCRIPTION: ${this.description}
-        GATES: ${this.gatesInformation(this.gates)}
+        GATES: ${this.gatesInformation()}
         `;
     }
 }

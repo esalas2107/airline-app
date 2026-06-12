@@ -33,7 +33,7 @@ export abstract class User {
         return this._passportId;
     }
 
-    calculateUserAge(birthDate: Date) {
+    protected calculateUserAge(birthDate: Date): number {
         let userAge = 0;
 
         const actualDate = new Date();
@@ -58,6 +58,6 @@ export abstract class User {
         return userAge;
     }
 
-    abstract toString(): string;
+    protected abstract toString(): string;
 
 }

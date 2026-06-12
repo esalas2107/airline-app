@@ -2,7 +2,7 @@ import { Flight } from "../flight/flight";
 import { City } from "./city";
 import { Terminal } from "./terminal";
 
-class Airport {
+export class Airport {
     private _airportId: number;
     private _airportName: string
     private _city: City;
@@ -45,20 +45,20 @@ class Airport {
         this._terminals.push(terminal);
     }
 
-    terminalsInformation(terminals: Terminal[]): string {
+    terminalsInformation(): string {
         let terminalsInformation = "";
 
-        terminals.forEach(terminal => {
+        this.terminals.forEach(terminal => {
             terminalsInformation += terminal.toString()
         });
 
         return terminalsInformation;
     }
 
-    flightsInformation(flights: Flight[]): string {
+    flightsInformation(): string {
         let flightsInformation = "";
 
-        flights.forEach(flight => {
+        this.flights.forEach(flight => {
             flightsInformation += flight.toString()
         });
 
@@ -71,8 +71,16 @@ class Airport {
         ID: ${this.airportId}
         NAME: ${this.airportName}
         CITY: ${this.city.toString()}
-        TERMINALS: ${this.terminalsInformation(this.terminals)}
-        FLIGHTS: ${this.flightsInformation(this.flights)}
+        TERMINALS: ${this.terminalsInformation()}
+        FLIGHTS: ${this.flightsInformation()}
+        `;
+    }
+
+    specialToString(): string {
+        return `
+        *** AIRPORT INFORMATION ***
+        ID: ${this.airportId}
+        NAME: ${this.airportName}
         `;
     }
 }

@@ -2,7 +2,7 @@ import { User } from "./user";
 
 type EmployeeRole = "Captain" | "Copilot" | "Flight Engineer" | "Purser" | "Stewardess" | "Counter staff" | "Gate staff" | "Flight dispatcher"
 
-class Employee extends User {
+export class Employee extends User {
     private _employeeId: number;
     private _role: EmployeeRole;
 
