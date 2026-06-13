@@ -97,7 +97,6 @@ export class Flight {
     toString(): string {
         return `
         *** FLIGHT INFORMATION ***
-        ID: ${this.flightId}
         FLIGHT NUMBER: ${this.flightNumber}
         ORIGIN: ${this.origin.specialToString()}
         DESTINATION: ${this.destination.specialToString()}

@@ -26,7 +26,6 @@ export class State {
     toString(): string {
         return `
         *** STATE INFORMATION ***
-        ID: ${this.stateId}
         NAME: ${this.stateName}
         COUNTRY: ${this.country.toString()}  
         `;

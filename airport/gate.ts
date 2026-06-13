@@ -18,7 +18,6 @@ export class Gate {
     toString(): string {
         return `
         *** GATE INFORMATION ***
-        ID: ${this.gateId}
         CODE: ${this.gateCode}
         `;
     }

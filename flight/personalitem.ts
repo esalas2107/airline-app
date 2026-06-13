@@ -9,7 +9,6 @@ export class PersonalItem extends Bag {
     toString(): string {
         return `
         *** PERSONAL ITEM INFORMATION ***
-        ID: ${this.bagId}
         MEASURES: ${this.measures}
         WEIGHT: ${this.weight}
         `;

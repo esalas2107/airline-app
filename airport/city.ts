@@ -26,7 +26,6 @@ export class City {
     toString(): string {
         return `
         *** CITY INFORMATION ***
-        ID: ${this.cityId}
         NAME: ${this.cityName}
         STATE: ${this.state.toString()}
         `;

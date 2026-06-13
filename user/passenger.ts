@@ -27,7 +27,6 @@ export class Passenger extends User {
     toString(): string {
         return `
         *** PASSENGER INFORMATION ***
-        ID: ${this.userId}
         NAME: ${this.firstName}
         LAST NAME: ${this.lastName}
         AGE: ${this.calculateUserAge(this.birthDate)} years old

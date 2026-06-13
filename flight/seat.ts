@@ -18,7 +18,6 @@ export class Seat {
     toString(): string {
         return `
         *** SEAT INFORMATION ***
-        ID: ${this.seatId}
         CODE: ${this.seatCode}
         `
     }

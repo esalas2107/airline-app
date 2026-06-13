@@ -8,7 +8,6 @@ export class CheckedBaggage extends Bag {
     toString(): string {
         return `
         *** CHECKED BAGGAGE INFORMATION ***
-        ID: ${this.bagId}
         MEASURES: ${this.measures}
         WEIGHT: ${this.weight}
         `;

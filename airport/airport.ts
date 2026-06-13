@@ -79,7 +79,6 @@ export class Airport {
     specialToString(): string {
         return `
         *** AIRPORT INFORMATION ***
-        ID: ${this.airportId}
         NAME: ${this.airportName}
         `;
     }

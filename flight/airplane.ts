@@ -24,7 +24,6 @@ export class Airplane {
     toString(): string {
         return `
         *** AIRPLANE INFORMATION ***
-        ID: ${this.airplaneId}
         MODEL: ${this.model}
         NUMBER OF SEATS: ${this.seatsCapacity}
         `;

@@ -18,7 +18,6 @@ export class Country {
     toString(): string {
         return `
         *** COUNTRY INFORMATION ***
-        ID: ${this.countryId}
         NAME: ${this.countryName}
         `;
     }

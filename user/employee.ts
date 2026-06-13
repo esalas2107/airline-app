@@ -23,7 +23,6 @@ export class Employee extends User {
     toString(): string {
         return `
         *** EMPLOYEE INFORMATION ***
-        ID: ${this.userId}
         NAME: ${this.firstName}
         LAST NAME: ${this.lastName}
         AGE: ${this.calculateUserAge(this.birthDate)} years old
