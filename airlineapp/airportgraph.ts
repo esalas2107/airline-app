@@ -10,7 +10,7 @@ class GraphNode<T> {
     }
 }
 
-class AirportGraph<T> {
+export class AirportGraph<T> {
     private nodes: Map<string, GraphNode<T>>;
 
     constructor() {

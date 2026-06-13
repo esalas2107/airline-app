@@ -1,3 +1,4 @@
+import { AirportGraph } from "../airlineapp/airportgraph";
 import { Country } from "../airport/country";
 import { State } from "../airport/state";
 import { City } from "../airport/city";
@@ -548,3 +549,82 @@ export const flightCM404 = new Flight(22, "CM404", bog, pty,
 flightCM404.addEmployee(cap8); flightCM404.addEmployee(cop8);
 flightCM404.addEmployee(pur6); flightCM404.addEmployee(stew12); flightCM404.addEmployee(stew13); flightCM404.addEmployee(stew14);
 bog.addFlight(flightCM404);
+
+// ═══════════════════════════════════════════════════════════════
+// AIRPORT GRAPH
+// Nodos  = aeropuertos (id: código IATA)
+// Aristas = vuelos dirigidos (origen → destino)
+// Si hay vuelo de ida y vuelta se llama addEdge en ambas direcciones
+// ═══════════════════════════════════════════════════════════════
+export const airportGraph = new AirportGraph();
+
+// ─── Nodos ───────────────────────────────────────────────────
+airportGraph.addNode("PTY", pty);
+airportGraph.addNode("SJO", sjo);
+airportGraph.addNode("BOG", bog);
+airportGraph.addNode("MDE", mde);
+airportGraph.addNode("MIA", mia);
+airportGraph.addNode("JFK", jfk);
+airportGraph.addNode("IAH", iah);
+airportGraph.addNode("MEX", mex);
+airportGraph.addNode("LIM", lim);
+airportGraph.addNode("EZE", eze);
+airportGraph.addNode("GRU", gru);
+airportGraph.addNode("SCL", scl);
+airportGraph.addNode("SDQ", sdq);
+airportGraph.addNode("UIO", uio);
+airportGraph.addNode("MAD", mad);
+airportGraph.addNode("CCS", ccs);
+
+// ─── Aristas (basadas en los 22 vuelos de la data) ───────────
+
+// PTY ↔ SJO  (bidireccional: CM841/CM843 ida, CM302 vuelta)
+airportGraph.addEdge("PTY", "SJO");
+airportGraph.addEdge("SJO", "PTY");
+
+// PTY ↔ MIA  (bidireccional: CM707 ida, CM708 vuelta)
+airportGraph.addEdge("PTY", "MIA");
+airportGraph.addEdge("MIA", "PTY");
+
+// PTY ↔ JFK  (bidireccional: CM321 ida, CM322 vuelta)
+airportGraph.addEdge("PTY", "JFK");
+airportGraph.addEdge("JFK", "PTY");
+
+// PTY ↔ MEX  (bidireccional: CM610 ida, CM611 vuelta)
+airportGraph.addEdge("PTY", "MEX");
+airportGraph.addEdge("MEX", "PTY");
+
+// PTY ↔ SCL  (bidireccional: CM120 ida, CM121 vuelta)
+airportGraph.addEdge("PTY", "SCL");
+airportGraph.addEdge("SCL", "PTY");
+
+// PTY ↔ BOG  (BOG→PTY existe como CM404 independiente)
+airportGraph.addEdge("PTY", "BOG");
+airportGraph.addEdge("BOG", "PTY");
+
+// PTY → CCS  (solo ida: CM480)
+airportGraph.addEdge("PTY", "CCS");
+
+// PTY → MDE  (solo ida: CM443)
+airportGraph.addEdge("PTY", "MDE");
+
+// PTY → EZE  (solo ida: CM021)
+airportGraph.addEdge("PTY", "EZE");
+
+// PTY → LIM  (solo ida: CM270)
+airportGraph.addEdge("PTY", "LIM");
+
+// PTY → GRU  (solo ida: CM062)
+airportGraph.addEdge("PTY", "GRU");
+
+// PTY → IAH  (solo ida: CM500)
+airportGraph.addEdge("PTY", "IAH");
+
+// PTY → SDQ  (solo ida: CM750)
+airportGraph.addEdge("PTY", "SDQ");
+
+// PTY → UIO  (solo ida: CM561)
+airportGraph.addEdge("PTY", "UIO");
+
+// PTY → MAD  (solo ida: CM900, ruta estacional)
+airportGraph.addEdge("PTY", "MAD");
